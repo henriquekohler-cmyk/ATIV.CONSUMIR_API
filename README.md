@@ -1,31 +1,32 @@
 # Consumo de API: ViaCEP
 
-Atividade realizada por Henrique Jean Köhler e Henrique Nunes Lopes Krieger | Turma: DS M3/M6
+Atividade realizada por **Henrique Jean Köhler** e **Henrique Nunes Lopes Krieger** | **Turma:** DS M3/M6
 
 Este projeto realiza a integração com uma API externa para consulta e validação de endereços brasileiros a partir do CEP.
 
 ---
 
 ## Sumário
-- [1. API Utilizada](#1-api-utilizada)
-- [2. O que a API Retorna](#2-o-que-a-api-retorna)
-- [3. Endpoint e Exemplo de Requisição](#3-endpoint-e-exemplo-de-requisição)
+1. [API Utilizada](#1-api-utilizada)
+2. [O que a API Retorna](#2-o-que-a-api-retorna)
+3. [Como Rodar](#3-como-rodar)
+4. [Dificuldades Encontradas](#4-dificuldades-encontradas)
+5. [Endpoint e Exemplo de Requisição](#5-endpoint-e-exemplo-de-requisição)
+6. [Demonstração do Projeto](#6-demonstração-do-projeto)
 
 ---
 
 ## 1. API Utilizada
 
-Utilizamos a API **[ViaCEP](https://viacep.com.br/)**, um serviço gratuito e público para consulta de Códigos de Endereçamento Postal (CEP) do Brasil.
-
+Utilizamos a API **ViaCEP**, um serviço gratuito e público para consulta de Códigos de Endereçamento Postal (CEP) do Brasil.
 * **Gratuito:** Não exige chave de autenticação (API Key).
-* **Documentação Oficial:** [https://viacep.com.br/](https://viacep.com.br/)
+* **Documentação Oficial:** https://viacep.com.br/
 
 ---
 
 ## 2. O que a API Retorna
 
 A API retorna um objeto JSON com informações completas sobre o endereço correspondente. No projeto, as principais informações utilizadas foram:
-
 * `cep`: Código de Endereçamento Postal formatado.
 * `logradouro`: Nome da rua, avenida ou praça.
 * `bairro`: Bairro do endereço.
@@ -34,54 +35,40 @@ A API retorna um objeto JSON com informações completas sobre o endereço corre
 * `regiao`: Região geográfica (Ex: Sudeste, Sul, etc.).
 
 ---
+
 ## 3. Como Rodar
-Para executar o projeto, é necessário ter os arquivos:
 
-Plaintext
-index.html
-script.js
-Os dois arquivos devem ficar na mesma pasta.
+Para executar o projeto, é necessário ter os arquivos `index.html` e `script.js` na mesma pasta.
 
-Depois, basta abrir o arquivo index.html no navegador.
+Depois, basta abrir o arquivo `index.html` no navegador ou utilizar a extensão Live Server no Visual Studio Code.
 
-Também é possível utilizar o Live Server no Visual Studio Code para abrir o projeto.
-
-Funcionamento
+### Funcionamento
 O projeto funciona seguindo estas etapas:
+`Consumir API` → `fetch()` → `Receber JSON` → `Tratar os dados` → `Mostrar na tela`
 
-Plaintext
-Consumir API
-     ↓
-  fetch()
-     ↓
-Receber JSON
-     ↓
-Tratar os dados
-     ↓
-Mostrar na tela
-
+---
 
 ## 4. Dificuldades Encontradas
+
 Uma das dificuldades foi fazer a consulta funcionar corretamente e entender por que alguns CEPs não mostravam os dados.
 
 O problema acontecia quando era digitado um CEP inválido ou que não existia. Para resolver, foi feita uma validação do CEP antes da consulta e também foi tratado o retorno de erro da API.
 
-Outra dificuldade foi entender como o fetch() recebe os dados da API em formato JSON e como utilizar essas informações no HTML.
+Outra dificuldade foi entender como o `fetch()` recebe os dados da API em formato JSON e como utilizar essas informações no HTML.
 
 Depois disso, o projeto passou a buscar o CEP, receber os dados, tratar as informações e mostrar o endereço na tela.
 
+---
 
 ## 5. Endpoint e Exemplo de Requisição
 
 Para buscar os dados, é realizada uma requisição HTTP do tipo **GET** enviando o CEP desejado e o formato de resposta esperado (`json`).
 
 ### Endpoint Chamado
-```http
-GET [https://viacep.com.br/ws/01001000/json/](https://viacep.com.br/ws/01001000/json/)
-  "estado": "São Paulo",
-  "Região": "Sudeste"
-  }
+`GET https://viacep.com.br/ws/01001000/json/`
 
+### Exemplo de Resposta
+```json
 {
   "cep": "01001-000",
   "logradouro": "Praça da Sé",
@@ -93,6 +80,9 @@ GET [https://viacep.com.br/ws/01001000/json/](https://viacep.com.br/ws/01001000/
   "regiao": "Sudeste",
   "ibge": "3550308",
   "gia": "1004",
+  "ddd": "11",
+  "siafi": "7107"
+}
   "ddd": "11",
   "siafi": "7107"
 }
