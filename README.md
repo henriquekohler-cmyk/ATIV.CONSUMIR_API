@@ -1,6 +1,6 @@
-# Atividade realizada por Henrique Jean Köhler e Henrique Nunes Lopes Krieger | Turma: DS M3/M6
-
 # Consumo de API: ViaCEP
+
+Atividade realizada por Henrique Jean Köhler e Henrique Nunes Lopes Krieger | Turma: DS M3/M6
 
 Este projeto realiza a integração com uma API externa para consulta e validação de endereços brasileiros a partir do CEP.
 
