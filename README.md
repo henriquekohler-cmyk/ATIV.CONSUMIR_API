@@ -34,8 +34,44 @@ A API retorna um objeto JSON com informações completas sobre o endereço corre
 * `regiao`: Região geográfica (Ex: Sudeste, Sul, etc.).
 
 ---
+## 3. Como Rodar
+Para executar o projeto, é necessário ter os arquivos:
 
-## 3. Endpoint e Exemplo de Requisição
+Plaintext
+index.html
+script.js
+Os dois arquivos devem ficar na mesma pasta.
+
+Depois, basta abrir o arquivo index.html no navegador.
+
+Também é possível utilizar o Live Server no Visual Studio Code para abrir o projeto.
+
+Funcionamento
+O projeto funciona seguindo estas etapas:
+
+Plaintext
+Consumir API
+     ↓
+  fetch()
+     ↓
+Receber JSON
+     ↓
+Tratar os dados
+     ↓
+Mostrar na tela
+
+
+## 4. Dificuldades Encontradas
+Uma das dificuldades foi fazer a consulta funcionar corretamente e entender por que alguns CEPs não mostravam os dados.
+
+O problema acontecia quando era digitado um CEP inválido ou que não existia. Para resolver, foi feita uma validação do CEP antes da consulta e também foi tratado o retorno de erro da API.
+
+Outra dificuldade foi entender como o fetch() recebe os dados da API em formato JSON e como utilizar essas informações no HTML.
+
+Depois disso, o projeto passou a buscar o CEP, receber os dados, tratar as informações e mostrar o endereço na tela.
+
+
+## 5. Endpoint e Exemplo de Requisição
 
 Para buscar os dados, é realizada uma requisição HTTP do tipo **GET** enviando o CEP desejado e o formato de resposta esperado (`json`).
 
