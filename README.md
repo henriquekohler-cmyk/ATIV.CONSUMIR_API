@@ -1,10 +1,10 @@
-# 🌐 Consumo de API: ViaCEP
+# Consumo de API: ViaCEP
 
 Este projeto realiza a integração com uma API externa para consulta e validação de endereços brasileiros a partir do CEP.
 
 ---
 
-## 📑 Sumário
+## Sumário
 - [1. API Utilizada](#1-api-utilizada)
 - [2. O que a API Retorna](#2-o-que-a-api-retorna)
 - [3. Endpoint e Exemplo de Requisição](#3-endpoint-e-exemplo-de-requisição)
