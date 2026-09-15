@@ -37,7 +37,7 @@ A API retorna um objeto JSON com informações completas sobre o endereço corre
 
 Para buscar os dados, é realizada uma requisição HTTP do tipo **GET** enviando o CEP desejado e o formato de resposta esperado (`json`).
 
-### 🔗 Endpoint Chamado
+### Endpoint Chamado
 ```http
 GET [https://viacep.com.br/ws/01001000/json/](https://viacep.com.br/ws/01001000/json/)
   "estado": "São Paulo",
