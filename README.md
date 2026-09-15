@@ -1,5 +1,6 @@
 <img width="223" height="263" alt="JSON" src="https://github.com/user-attachments/assets/ab012b15-6fb9-45a6-a690-bf098d647d51" />
-<img width="223" height="263" alt="JSON" src="https://github.com/user-attachments/assets/6b6e7404-6c10-4d68-8fdc-2be8a4cb4736" />
+<img width="320" height="659" alt="image" src="https://github.com/user-attachments/assets/29e159f3-d12e-4a2f-9e70-5074c1a80334" />
+
 # Consumo de API: ViaCEP
 
 Atividade realizada por **Henrique Jean Köhler** e **Henrique Nunes Lopes Krieger** | **Turma:** DS M3/M6
@@ -63,8 +64,8 @@ Depois disso, o projeto passou a buscar o CEP, receber os dados, tratar as infor
 
 ## 5. Demonstração do Projeto
 
-[JSON.webp](https://github.com/henriquekohler-cmyk/ATIV.CONSUMIR_API/blob/main/JSON.webp?raw=true)
-[Print da tela funcionando.png](https://github.com/henriquekohler-cmyk/ATIV.CONSUMIR_API/blob/main/Print%20da%20tela%20funcionando.png?raw=true)
+<img width="223" height="263" alt="JSON" src="https://github.com/user-attachments/assets/ab012b15-6fb9-45a6-a690-bf098d647d51" />
+<img width="320" height="659" alt="image" src="https://github.com/user-attachments/assets/29e159f3-d12e-4a2f-9e70-5074c1a80334" />
 
 ---
 
