@@ -1,6 +1,3 @@
-<img width="223" height="263" alt="JSON" src="https://github.com/user-attachments/assets/ab012b15-6fb9-45a6-a690-bf098d647d51" />
-<img width="320" height="659" alt="image" src="https://github.com/user-attachments/assets/29e159f3-d12e-4a2f-9e70-5074c1a80334" />
-
 # Consumo de API: ViaCEP
 
 Atividade realizada por **Henrique Jean Köhler** e **Henrique Nunes Lopes Krieger** | **Turma:** DS M3/M6
