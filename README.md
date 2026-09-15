@@ -11,9 +11,9 @@ Este projeto realiza a integração com uma API externa para consulta e validaç
 2. [O que a API Retorna](#2-o-que-a-api-retorna)
 3. [Como Rodar](#3-como-rodar)
 4. [Dificuldades Encontradas](#4-dificuldades-encontradas)
-5. [Endpoint e Exemplo de Requisição](#5-endpoint-e-exemplo-de-requisição)
-6. [Demonstração do Projeto](#6-demonstração-do-projeto)
-
+5. [Demonstração do Projeto](#6-demonstração-do-projeto)
+6. [Endpoint e Exemplo de Requisição](#5-endpoint-e-exemplo-de-requisição)
+   
 ---
 
 ## 1. API Utilizada
@@ -57,10 +57,16 @@ O problema acontecia quando era digitado um CEP inválido ou que não existia. P
 Outra dificuldade foi entender como o `fetch()` recebe os dados da API em formato JSON e como utilizar essas informações no HTML.
 
 Depois disso, o projeto passou a buscar o CEP, receber os dados, tratar as informações e mostrar o endereço na tela.
+---
+
+## 5. Demonstração do Projeto
+
+JSON.webp
+Print da tela funcionando.png
 
 ---
 
-## 5. Endpoint e Exemplo de Requisição
+## 6. Endpoint e Exemplo de Requisição
 
 Para buscar os dados, é realizada uma requisição HTTP do tipo **GET** enviando o CEP desejado e o formato de resposta esperado (`json`).
 
@@ -83,6 +89,8 @@ Para buscar os dados, é realizada uma requisição HTTP do tipo **GET** enviand
   "ddd": "11",
   "siafi": "7107"
 }
+
+
   "ddd": "11",
   "siafi": "7107"
 }
