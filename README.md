@@ -1,43 +1,60 @@
-# ATIV.CONSUMIR_API
+# 🌐 Consumo de API: ViaCEP
 
-##1 Qual API  Você Usou 
+Este projeto realiza a integração com uma API externa para consulta e validação de endereços brasileiros a partir do CEP.
 
-Nos Usamos a API **ViaCEP**
+---
 
-A API e de Graça para Todo mundo Usar e para Consultar os Endereços do CEP dO Brasil.
+## 📑 Sumário
+- [1. API Utilizada](#1-api-utilizada)
+- [2. O que a API Retorna](#2-o-que-a-api-retorna)
+- [3. Endpoint e Exemplo de Requisição](#3-endpoint-e-exemplo-de-requisição)
 
-Aqui está o Link da  API 
-https://viacep.com.br/
+---
 
-##2 O que ela devolve
+## 1. API Utilizada
 
-Ela devolve Informações Relacionadas ao CEP Consultado, como:
+Utilizamos a API **[ViaCEP](https://viacep.com.br/)**, um serviço gratuito e público para consulta de Códigos de Endereçamento Postal (CEP) do Brasil.
 
--CEP
--Bairro
--Estado
--Região
--Cidade
+* **Gratuito:** Não exige chave de autenticação (API Key).
+* **Documentação Oficial:** [https://viacep.com.br/](https://viacep.com.br/)
 
-São os mais comuns de se ver e Também Foi o que a Gente mais Usou.
+---
 
-##3 O endereço que Você Chamou 
+## 2. O que a API Retorna
 
-A URL que Nos Utilizamos no Projeto foi:
-https://viacep.com.br/ws/01001000/json/
+A API retorna um objeto JSON com informações completas sobre o endereço correspondente. No projeto, as principais informações utilizadas foram:
 
-Dai Usamos um dos CEP mais Comum que Tem que e o '01001000' que retorna os dados em formato JSON.
+* `cep`: Código de Endereçamento Postal formatado.
+* `logradouro`: Nome da rua, avenida ou praça.
+* `bairro`: Bairro do endereço.
+* `localidade`: Cidade/Município.
+* `uf`: Estado (Unidade da Federação).
+* `regiao`: Região geográfica (Ex: Sudeste, Sul, etc.).
 
-Um exemplo da Resposta
+---
 
-'''Json
+## 3. Endpoint e Exemplo de Requisição
+
+Para buscar os dados, é realizada uma requisição HTTP do tipo **GET** enviando o CEP desejado e o formato de resposta esperado (`json`).
+
+### 🔗 Endpoint Chamado
+```http
+GET [https://viacep.com.br/ws/01001000/json/](https://viacep.com.br/ws/01001000/json/)
+  "estado": "São Paulo",
+  "Região": "Sudeste"
+  }
+
 {
   "cep": "01001-000",
   "logradouro": "Praça da Sé",
   "complemento": "lado ímpar",
-  "bairo": "Sé",
-  "localidade"; "São Paulo",
+  "bairro": "Sé",
+  "localidade": "São Paulo",
   "uf": "SP",
   "estado": "São Paulo",
-  "Região": "Sudeste"
-  }
+  "regiao": "Sudeste",
+  "ibge": "3550308",
+  "gia": "1004",
+  "ddd": "11",
+  "siafi": "7107"
+}
